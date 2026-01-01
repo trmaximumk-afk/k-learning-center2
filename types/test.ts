@@ -67,3 +67,37 @@ export type TestCard = Pick<
   Test,
   'id' | 'title' | 'emoji' | 'shortDesc' | 'category' | 'tags' | 'questionCount' | 'timeMinutes' | 'participants' | 'isNew'
 >;
+
+/** 척도별 점수 */
+export interface ScaleScore {
+  name: string;
+  score: number;
+  maxScore: number;
+  description?: string;
+}
+
+/** 검사 결과 */
+export interface TestResultData {
+  // 기본 정보
+  testId: string;
+  testTitle: string;
+  completedAt: string;
+
+  // 유형 결과
+  typeName: string;
+  typeEmoji: string;
+  typeDescription: string;
+
+  // 점수
+  totalScore: number;
+  maxTotalScore: number;
+  scaleScores: ScaleScore[];
+
+  // 분석
+  strengths: string[];
+  tips: string[];
+  cautions?: string[];
+
+  // 프리미엄
+  premium?: PremiumInfo;
+}
