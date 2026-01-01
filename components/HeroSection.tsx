@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+
 interface HeroSectionProps {
   totalParticipants: number;
 }
@@ -40,9 +42,12 @@ export function HeroSection({ totalParticipants }: HeroSectionProps) {
           </p>
 
           {/* CTA Button */}
-          <button className="px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all">
+          <Link
+            href="/tests/learning-style"
+            className="inline-block px-8 py-4 bg-white text-blue-600 font-bold text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all"
+          >
             지금 바로 검사하기 →
-          </button>
+          </Link>
 
           {/* Stats */}
           <div className="flex justify-center gap-8 mt-12">
