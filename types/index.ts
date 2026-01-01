@@ -1,4 +1,7 @@
-// 검사 관련 타입 정의
+// 타입 re-export
+export * from './test';
+
+// 질문/답변 관련 타입 정의
 
 export interface Question {
   id: string;
@@ -34,7 +37,8 @@ export interface CategoryScore {
   percentage: number;
 }
 
-export interface Test {
+/** 검사 상세 정보 (질문 포함) */
+export interface TestDetail {
   id: string;
   title: string;
   description: string;

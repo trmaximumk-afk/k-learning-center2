@@ -1,0 +1,74 @@
+{
+  "tests": [
+    {
+      "id": "learning-style-diagnosis",
+      "title": "학습성향 진단",
+      "emoji": "🧠",
+      "shortDesc": "나에게 맞는 학습 방법을 찾아보세요! 시각, 청각, 운동감각 중 어떤 유형인지 알아봅니다.",
+      "category": "learning-style",
+      "tags": ["BEST", "인기"],
+      "targetAudience": ["초등", "중등", "고등"],
+      "questionCount": 32,
+      "timeMinutes": 10,
+      "participants": 15234,
+      "createdAt": "2024-01-15",
+      "isNew": false,
+      "isActive": true,
+      "relatedTests": ["study-motivation-type", "study-habit-check"],
+      "premium": {
+        "available": true,
+        "price": 9900,
+        "features": [
+          "상세 학습 유형 분석 리포트",
+          "맞춤 학습 전략 가이드",
+          "과목별 학습법 추천"
+        ]
+      }
+    },
+    {
+      "id": "teacher-compatibility",
+      "title": "선생님 궁합 검사",
+      "emoji": "👩‍🏫",
+      "shortDesc": "나와 잘 맞는 선생님 유형은? 효과적인 수업 스타일을 알아보세요.",
+      "category": "relationship",
+      "tags": ["NEW", "인기"],
+      "targetAudience": ["중등", "고등"],
+      "questionCount": 24,
+      "timeMinutes": 8,
+      "participants": 8721,
+      "createdAt": "2024-11-20",
+      "isNew": true,
+      "isActive": true,
+      "relatedTests": ["learning-style-diagnosis", "communication-style"],
+      "premium": {
+        "available": true,
+        "price": 5900,
+        "features": [
+          "선생님 유형 매칭 리포트",
+          "소통 개선 팁",
+          "학습 환경 조언"
+        ]
+      }
+    },
+    {
+      "id": "study-motivation-type",
+      "title": "학습동기 유형검사",
+      "emoji": "🔥",
+      "shortDesc": "공부할 때 나를 움직이는 원동력은? 내적/외적 동기 유형을 진단합니다.",
+      "category": "motivation",
+      "tags": ["추천", "무료"],
+      "targetAudience": ["초등", "중등", "고등", "학부모"],
+      "questionCount": 20,
+      "timeMinutes": 7,
+      "participants": 12456,
+      "createdAt": "2024-06-10",
+      "isNew": false,
+      "isActive": true,
+      "relatedTests": ["learning-style-diagnosis", "goal-setting-ability"],
+      "premium": {
+        "available": false
+      }
+    }
+  ],
+  "updatedAt": "2024-12-01"
+}
