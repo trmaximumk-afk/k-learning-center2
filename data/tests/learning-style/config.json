@@ -1,0 +1,67 @@
+{
+  "id": "learning-style",
+  "title": "학습성향 진단",
+  "emoji": "🧠",
+  "shortDesc": "나에게 딱 맞는 공부법을 찾아보세요",
+  "description": "이 검사는 학습 상황에서 나타나는 성향을 분석하여 16가지 학습 유형 중 자신에게 맞는 유형을 찾아줍니다. 에너지 방향(E/I), 정보 수집(S/N), 의사결정(T/F), 생활 양식(J/P) 4가지 척도를 기반으로 분석합니다.",
+  "category": "learning-style",
+  "tags": ["BEST", "인기"],
+  "targetAudience": ["초등", "중등", "고등"],
+  "questionCount": 32,
+  "timeMinutes": 15,
+  "version": "1.0.0",
+  "scales": [
+    {
+      "id": "EI",
+      "name": "에너지 방향",
+      "description": "학습 에너지를 어디서 얻는지",
+      "poles": [
+        { "code": "E", "name": "외향형", "description": "사람들과 함께 공부할 때 에너지를 얻어요" },
+        { "code": "I", "name": "내향형", "description": "혼자 집중해서 공부할 때 효율이 높아요" }
+      ]
+    },
+    {
+      "id": "SN",
+      "name": "정보 수집",
+      "description": "정보를 어떻게 받아들이는지",
+      "poles": [
+        { "code": "S", "name": "감각형", "description": "구체적이고 실제적인 정보를 선호해요" },
+        { "code": "N", "name": "직관형", "description": "개념과 가능성을 탐구하는 것을 좋아해요" }
+      ]
+    },
+    {
+      "id": "TF",
+      "name": "의사결정",
+      "description": "결정을 어떻게 내리는지",
+      "poles": [
+        { "code": "T", "name": "사고형", "description": "논리와 분석을 통해 결정해요" },
+        { "code": "F", "name": "감정형", "description": "가치와 감정을 고려해서 결정해요" }
+      ]
+    },
+    {
+      "id": "JP",
+      "name": "생활 양식",
+      "description": "학습을 어떻게 조직하는지",
+      "poles": [
+        { "code": "J", "name": "판단형", "description": "계획적이고 체계적으로 공부해요" },
+        { "code": "P", "name": "인식형", "description": "유연하고 자유롭게 공부해요" }
+      ]
+    }
+  ],
+  "temperaments": {
+    "SJ": { "name": "보호자형", "description": "체계적이고 책임감 있는 학습자" },
+    "SP": { "name": "탐험가형", "description": "실용적이고 유연한 학습자" },
+    "NF": { "name": "이상주의자형", "description": "의미를 추구하는 창의적 학습자" },
+    "NT": { "name": "분석가형", "description": "논리적이고 전략적인 학습자" }
+  },
+  "premium": {
+    "available": true,
+    "price": 9900,
+    "features": [
+      "16가지 유형 상세 분석 리포트",
+      "과목별 맞춤 학습 전략",
+      "선생님/친구 유형 궁합 분석",
+      "PDF 리포트 다운로드"
+    ]
+  }
+}

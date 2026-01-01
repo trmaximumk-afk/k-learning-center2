@@ -47,6 +47,9 @@ export interface Test {
   // 연관 검사
   relatedTests: string[];
 
+  // 경로 (검사 페이지 URL)
+  path?: string;
+
   // 프리미엄
   premium: PremiumInfo;
 }

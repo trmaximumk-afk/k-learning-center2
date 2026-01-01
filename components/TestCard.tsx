@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Test, TestTag } from '@/types/test';
 
 interface TestCardProps {
@@ -23,9 +24,20 @@ export function TestCard({ test, variant = 'default' }: TestCardProps) {
     return `${count}명`;
   };
 
+  const CardWrapper = ({ children, className }: { children: React.ReactNode; className: string }) => {
+    if (test.path) {
+      return (
+        <Link href={test.path} className={className}>
+          {children}
+        </Link>
+      );
+    }
+    return <div className={className}>{children}</div>;
+  };
+
   if (variant === 'horizontal') {
     return (
-      <div className="flex gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
+      <CardWrapper className="flex gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
         <div className="flex-shrink-0 w-16 h-16 bg-gray-50 rounded-lg flex items-center justify-center text-3xl">
           {test.emoji}
         </div>
@@ -48,13 +60,13 @@ export function TestCard({ test, variant = 'default' }: TestCardProps) {
             <span>👥 {formatParticipants(test.participants)}</span>
           </div>
         </div>
-      </div>
+      </CardWrapper>
     );
   }
 
   if (variant === 'compact') {
     return (
-      <div className="flex-shrink-0 w-48 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
+      <CardWrapper className="flex-shrink-0 w-48 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow cursor-pointer">
         <div className="text-3xl mb-2">{test.emoji}</div>
         <div className="flex items-center gap-1 mb-1">
           {test.isNew && (
@@ -67,12 +79,12 @@ export function TestCard({ test, variant = 'default' }: TestCardProps) {
         <p className="text-xs text-gray-400 mt-1">
           {test.questionCount}문항 · {test.timeMinutes}분
         </p>
-      </div>
+      </CardWrapper>
     );
   }
 
   return (
-    <div className="p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer">
+    <CardWrapper className="block p-5 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow cursor-pointer">
       <div className="flex items-start justify-between mb-3">
         <div className="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center text-3xl">
           {test.emoji}
@@ -106,6 +118,6 @@ export function TestCard({ test, variant = 'default' }: TestCardProps) {
           </span>
         </div>
       )}
-    </div>
+    </CardWrapper>
   );
 }
